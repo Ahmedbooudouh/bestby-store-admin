@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BestBuy Store Admin</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="admin-header-top">
+        <h1>BestBuy Store - Admin Panel</h1>
+        <nav class="admin-nav">
+          <a href="index.html" class="active">Products</a>
+          <a href="orders.html">Orders</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="create-product-section">
+        <h2>Create New Product</h2>
+        <form id="product-form">
+          <div class="form-row">
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+
+          <div class="form-row">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+              <option value="">-- Select a category --</option>
+              <option value="Laptops">Laptops</option>
+              <option value="TV & Home Theatre">TV &amp; Home Theatre</option>
+              <option value="Headphones and Portable Speakers">
+                Headphones and Portable Speakers
+              </option>
+              <option value="Video Games, Consoles, and Accessories">
+                Video Games, Consoles, and Accessories
+              </option>
+              <option value="PC Gaming">PC Gaming</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="price">Price:</label>
+            <input
+              id="price"
+              name="price"
+              type="number"
+              step="0.01"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="stock">Stock:</label>
+            <input id="stock" name="stock" type="number" required />
+          </div>
+
+          <button class="btn-primary" type="submit">Create Product</button>
+        </form>
+
+        <p id="form-message" class="message"></p>
+      </section>
+
+      <section id="products-section">
+        <h2>Existing Products</h2>
+        <button id="refresh-btn" class="btn-secondary">Refresh List</button>
+
+        <div id="products-container" class="products-grid">
+          <!-- Admin product cards go here -->
+        </div>
+
+        <p id="error-message" class="error"></p>
+      </section>
+    </main>
+<script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

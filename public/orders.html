@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BestBuy Store Admin - Orders</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="admin-header-top">
+        <h1>BestBuy Store - Admin Panel</h1>
+        <nav class="admin-nav">
+          <a href="index.html">Products</a>
+          <a href="orders.html" class="active">Orders</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="orders-section">
+        <h2>Orders Management</h2>
+        <p class="section-intro">
+          Here you can review incoming orders, update their status, and mark
+          them as completed.
+        </p>
+
+        <button id="refresh-orders-btn" class="btn-secondary">
+          Refresh Orders
+        </button>
+
+        <div id="orders-container" class="orders-list">
+          <!-- Order cards will be injected here -->
+        </div>
+
+        <p id="orders-error" class="error"></p>
+      </section>
+    </main>
+    <script src="config.js"></script>
+    <script src="orders.js"></script>
+  </body>
+</html>
